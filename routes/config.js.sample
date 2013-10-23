@@ -18,6 +18,8 @@ config.twitter.consumer_secret 		= "qwerty"
 config.twitter.access_token 		= "omgwtf"
 config.twitter.access_token_secret 	= "thegame"
 
+config.localStoragepath = "/save/uploads/here"
+
 // Apache serving images of the basepath folder on baseurl
 config.localImageHost = {}
 config.localImageHost.baseurl = "http://i.web.site/"

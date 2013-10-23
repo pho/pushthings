@@ -18,8 +18,8 @@ var funcs = [ check
 			  ,genPost.createPost // Generate post and req.permalink to spread
 
 			  // From now on, req.imglink and req.permalink are available
-//			  ,require("./twitter").createPost
-//			  
+			  ,require("./twitter").createPost
+
 			  ,prettyEnd
 			];
 
@@ -91,7 +91,7 @@ function prettyEnd(req, cb){
 function saveFileSync(req, cb){
 	var logger = LOG("saveFileSync");
 
-	var newPath = "/home/pho/pushthings/uploads/" + req.body.text + ".jpg";
+	var newPath = config.localStoragePath + req.body.text + ".jpg";
 	fs.writeFileSync(newPath, fs.readFileSync(req.files.img.path));
 	logger("File synchronously saved as", newPath);
 
@@ -106,7 +106,7 @@ function saveFile(req, cb){
 	fs.readFile(req.files.img.path, function (err, data) {
 
 		var newid =  parseInt(req.postDate.getTime()).toString(36); //unix timestamp using base36
-		var newPath = "/home/pho/pushthings/uploads/" + newid + ".jpg";
+		var newPath = config.localStoragePath + newid + ".jpg";
 		//LOG("Saving file", newPath);
 		fs.writeFile(newPath, data, function (err) {
 			if(err) throw err;
