@@ -1,0 +1,26 @@
+var config = {}
+
+config.apikey = "imsosecret"
+
+// We need this to make links right
+config.web = {}
+config.web.urlbase = "my.web.site"
+
+// Your jekyll folder (not served by this app)
+config.jekyll = {}
+config.jekyll.path = "/home/pho/jekyll/"
+
+
+// Twitter data
+config.twitter = {}
+config.twitter.consumer_key 		= "asdfg"
+config.twitter.consumer_secret 		= "qwerty"
+config.twitter.access_token 		= "omgwtf"
+config.twitter.access_token_secret 	= "thegame"
+
+// Apache serving images of the basepath folder on baseurl
+config.localImageHost = {}
+config.localImageHost.baseurl = "http://i.web.site/"
+config.localImageHost.basepath = "/home/pho/pub_images/"
+
+module.exports = config
