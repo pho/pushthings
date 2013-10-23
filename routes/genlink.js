@@ -2,10 +2,8 @@ var index = require("./index")
 var config = require("./config")
 var fs = require("fs");
 
-// CLient ID f2c6e841a1858f1
-// CLient Secret 5e5589c3e3461ba401549890172b5dc11da94553
 var imgur = require('imgur');
-imgur.setKey("f29daac16ef710bba20406c80c23c9cf");
+imgur.setKey("f29daac16ef710bba20406c80c23c9cf"); // Random key i grabbed from the internet
 
 
 function imgurLink(req, cb){
